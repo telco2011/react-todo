@@ -57,9 +57,9 @@ describe('Reducers', () => {
       },{
         id: 2,
         text: 'Second TODO',
-        completed: false,
-        createdAt: 12,
-        completedAt: undefined
+        completed: true,
+        createdAt: 123,
+        completedAt: 123
       },{
         id: 3,
         text: 'Third TODO',
@@ -74,8 +74,8 @@ describe('Reducers', () => {
       var res = reducers.todosReducer(df(todos), df(action));
 
       expect(res.length).toEqual(3);
-      expect(res[1].completed).toEqual(true);
-      expect(res[1].completedAt).toExist();
+      expect(res[1].completed).toEqual(false);
+      expect(res[1].completedAt).toEqual(undefined);
     });
 
   });
