@@ -15,7 +15,7 @@ export var showCompletedReducer = (state = false, action) => {
     case 'TOGGLE_SHOW_COMPLETED':
       return !state;
     default:
-      return state
+      return state;
   }
 };
 
@@ -25,7 +25,7 @@ export var todosReducer = (state = [], action) => {
       return [
         ...state,
         {
-          id: action.id,
+          id: UUID(),
           text: action.text,
           completed: false,
           createdAt: moment().unix(),
@@ -47,6 +47,11 @@ export var todosReducer = (state = [], action) => {
           return todo;
         }
       });
+    case 'ADD_TODOS':
+      return [
+        ...state,
+        ...action.todos
+      ];
     default:
       return state;
   }
