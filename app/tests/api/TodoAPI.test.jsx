@@ -18,7 +18,7 @@ describe('TodoAPI', () => {
     it('should set valid todos array', () => {
       var todos = [{
         id: 23,
-        text: 'text all files',
+        text: 'test all files',
         completed: false
       }];
       TodoAPI.setTodos(todos);
