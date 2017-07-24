@@ -3,7 +3,7 @@ var actions = require('actions');
 
 describe('Actions', () => {
 
-  it('should dgenerate search text action', () => {
+  it('should generate search text action', () => {
     var action = {
       type: 'SET_SEARCH_TEXT',
       searchText: 'Some search text'
@@ -16,9 +16,14 @@ describe('Actions', () => {
   it('should generate add todo action', () => {
     var action = {
       type: 'ADD_TODO',
-      text: 'Thing to do'
+      todo: {
+        id: '123abc',
+        text: 'Anything we like',
+        completed: false,
+        createdAt: 0
+      }
     };
-    var res = actions.addTodo(action.text);
+    var res = actions.addTodo(action.todo);
 
     expect(res).toEqual(action);
   });
