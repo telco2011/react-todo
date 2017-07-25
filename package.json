@@ -8,7 +8,28 @@
     "build": "webpack",
     "start": "npm run build && node server.js"
   },
+  "keywords": [
+    "ReactJS", 
+    "firebase",
+    "webpack",
+    "karmajs"
+  ],
+  "bugs": {
+    "url": "https://github.com/telco2011/react-todo/issues",
+    "email": "davidlopez.david@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "David Lopez",
+      "email": "davidlopez.david@gmail.com"
+    }
+  ],
+  "homepage": "",
   "author": "David Lopez",
+  "repository": "https://github.com/telco2011/react-todo.git",
+  "engines": {
+    "node": ">=6.11.1"
+  },
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
